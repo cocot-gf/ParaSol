@@ -1,5 +1,5 @@
 # ParaSol
-Converts the Solist-AI™ MCU into an SPI peripheral device.
+Converts the Solist-AI™ MCU into an SPI peripheral device.  
 Solist-AI™ MCUをSPIペリフェラル・デバイス化するファームウェア
 
 # 1 概要
