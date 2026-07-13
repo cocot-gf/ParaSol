@@ -48,6 +48,6 @@ hexとelfの中身は実質同じなので、Armマイコンに対応したラ�
 [![Youtube](https://github.com/user-attachments/assets/021a77d3-e82f-4512-aa27-0bdfd01b35eb)](https://youtu.be/9uAWkHuoVFw)
 
 # 5 応用例
-<img width="600" height="599" alt="g" src="https://github.com/user-attachments/assets/2173fe0f-0020-4f88-a8de-290fd3571619" />
+<img width="600" height="599" alt="g" src="https://github.com/user-attachments/assets/68597ea7-1185-4626-af2f-329df97a164a" />
 <img width="600" height="586" alt="b" src="https://github.com/user-attachments/assets/fcd459e4-e02b-4d8e-b177-f3aa03a58ff1" />
 <img width="600" height="588" alt="c" src="https://github.com/user-attachments/assets/c865f02c-99cd-4107-84be-65bba7541e5b" />
