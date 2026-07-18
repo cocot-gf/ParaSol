@@ -68,7 +68,7 @@ static void setupGpio(void) {
 
   set_bit(READYPORT, nREADY);     // READY=H
   set_bit(LEDPORT, LED);          // LED=点灯
-  PORT7->P7MOD1 = 0x00020000U;    // P76=BUSY out
+  PORT7->P7MOD1 = 0x00020000U;    // P76=READY out
   PORT7->P7MOD0 = 0x00020000U;    // P72=LED out
 }
 //------------------------------------------------------------------------------
