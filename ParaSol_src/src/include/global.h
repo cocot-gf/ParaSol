@@ -18,7 +18,7 @@
 // GPIO定義
 #define LED       (0x04U)
 #define nREADY    (0x40U)
-#define LEDPORT   (PORT7->P7DO)  // ポート・ビット割り当てを変更する場合はsetupGpio()も手動で変更すること。
+#define LEDPORT   (PORT7->P7DO)  // ポート・ビット割り当てを変更する場合はsetupGpio()のPxMODxも手動で変更すること。
 #define READYPORT (PORT7->P7DO)
 
 // リセット条件の回数
