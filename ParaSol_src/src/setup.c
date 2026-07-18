@@ -66,7 +66,8 @@ static void setupGpio(void) {
     PORT6->P6MOD0 = 0x15151215U;  // P63=SS1# in, P62=SDI1 in, P61=SDO1 out, P60=SCK1 in
   }
 
-  PORT7->P7DO   = nREADY | LED;   // READY=H, LED=点灯
+  set_bit(READYPORT, nREADY);     // READY=H
+  set_bit(LEDPORT, LED);          // LED=点灯
   PORT7->P7MOD1 = 0x00020000U;    // P76=BUSY out
   PORT7->P7MOD0 = 0x00020000U;    // P72=LED out
 }
