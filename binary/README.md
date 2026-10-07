@@ -1,22 +1,24 @@
-# このフォルダには...
+# このフォルダにあるもの
 このフォルダにはParaSolのコンパイル済みバイナリイメージが置かれています。  
-ファイル形式はELFとHEXの2種類に分かれていますが、データの内容は同じです。書き込みソフトに合わせてどちらかを利用してください。
+ファイル形式はELFとHEXの2種類に分かれていますが、データの内容は同じです。  
+書き込みソフトに合わせてどちらかを利用してください。
 
 # 各ファイルの説明
 ファイル名には ParaSol_ に続いてバージョン番号とファイルの簡単な概要が付いています。
 
-| イメージ名 | 概要 |
-| --- | --- |
-| Single | シングルポート構成でコンパイルしたもの。プリプロセッサオプションの変更のみ。 |
-| Dual | デュアルポート構成でコンパイルしたもの。プリプロセッサオプションの変更のみ。 |
-| Dual_LedP44_RdyP45 | デュアルポート構成で、PWRSTAT(LED)をP44、READYをP45に変更したもの。 |
-| Dual_ParaSolPCB | デュアルポート構成で、PWRSTATをP80、READYをP81に変更したもの。ParaSolPCB用。 |
+| ファイル名 | 概要 | PWRSTAT | READY |
+| --- | --- | --- | --- |
+| Dual | デュアルポート構成でコンパイルしたもの。 | P72 | P76 |
+| Dual_LedP44_RdyP45 | デュアルポート構成、48ピンパッケージデバイス用の変更。 | P44 | P45 |
+| Dual_ParaSolPCB | デュアルポート構成、ParaSolPCB用の変更。 | P80 | P81 |
+| Single | シングルポート構成でコンパイルしたもの。 | P72 | P76 |
+| Single_LedP56_RdyP76 | シングルポート構成、DT-EBML63Q2557のFT2232H経由でPCと通信するための変更。<br> P76の追加配線が必要。 | P56 | P76 |
 
 
 # ソースの変更箇所
 マニュアルの「10章 移植の手引き」のサンプルとして、ソースの変更箇所を示しておきます。
 
-## Dual_LedP44_RdyP45 - 48ピンパッケージデバイス用
+## Dual_LedP44_RdyP45 - 48ピンパッケージデバイス用の変更
 global.h
 ```c
 // GPIO定義
@@ -94,14 +96,14 @@ static void setupGpio(void) {
 ```
 
 
-## Single_DT-EBML63Q2557 - 内蔵FT2232H経由でPCと通信する例
+## Single_LedP56_RdyP76 - DT-EBML63Q2557のFT2232H経由でPCと通信するための変更
 global.h
 ```c
 // GPIO定義
-#define LED       (0x40U)  // P56
-#define READY     (0x40U)  // P76
-#define LEDPORT   (PORT5->P5DO)  // P56
-#define READYPORT (PORT7->P7DO)  // P76
+#define LED         (0x40U)  // P56
+#define READY       (0x40U)  // P76 変更なし
+#define LEDPORT     (PORT5->P5DO)  // P56
+#define READYPORT   (PORT7->P7DO)  // P76 変更なし
 ```
 
 setup.c
@@ -119,7 +121,7 @@ static void setupGpio(void) {
 
   clear_bit(READYPORT, READY);    // READY=L 起動処理中はLow
   set_bit(LEDPORT,   LED);        // LED=点灯
-  PORT7->P7MOD1 = 0x00020000U;    // P76=READY out
+  PORT7->P7MOD1 = 0x00020000U;    // P76=READY out 変更なし
   PORT5->P5MOD1 = 0x00020000U;    // P56=LED out
 }
 ```
