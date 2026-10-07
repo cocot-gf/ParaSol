@@ -40,13 +40,14 @@ ParaSolが処理中などでSPI通信ができない場合の状態を判定可�
 <img width="796" height="376" alt="2" src="https://github.com/user-attachments/assets/530eb834-6243-4fa1-8ead-435ae3012b8a" />
 
 # 4 プログラム利用方法
-使い方はParaSol_ProductManual.pdfを読んでください。  
-ParaSol_srcツリーにはソースファイル一式が含まれています。  
+使い方は[ParaSol_ProductManual.pdf](https://github.com/cocot-gf/ParaSol/blob/b48c929ddfc375fc4ac8e3bb0690078d2fe2760e/ParaSol_1.5_ProductManual_AMDT3.pdf)を読んでください。  
+
+[ParaSol_srcツリー](https://github.com/cocot-gf/ParaSol/tree/213b270182fe4c7482088d16837ffaf44c1fdd3f/ParaSol_src)にはソースファイル一式が含まれています。  
 プロジェクトのインポートに必要なドットファイルがアップロードできないので、zipでもソースをアップロードしてあります。
 
 ソースのコンパイルに必要なツールはロームのサイトからダウンロードできますが、ロームの評価ボードを購入しないとダウンロード権が得られません。
 
-なので、binaryフォルダにコンパイル済みのファイルを置いてあります。
+なので、[binaryツリー](https://github.com/cocot-gf/ParaSol/tree/213b270182fe4c7482088d16837ffaf44c1fdd3f/binary)にコンパイル済みのファイルを置いてあります。
 hexとelfの中身は実質同じなので、Armマイコンに対応したライティングソフトでCPUに書き込めばすぐに動きます。
   
 [![Youtube](https://github.com/user-attachments/assets/021a77d3-e82f-4512-aa27-0bdfd01b35eb)](https://youtu.be/9uAWkHuoVFw)
