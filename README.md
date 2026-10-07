@@ -67,3 +67,8 @@ ML63Q2537 48ピンデバイスにデュアルポート構成のプログラム�
 <img width="600" height="599" alt="g" src="https://github.com/user-attachments/assets/68597ea7-1185-4626-af2f-329df97a164a" />
 <img width="600" height="586" alt="b" src="https://github.com/user-attachments/assets/fcd459e4-e02b-4d8e-b177-f3aa03a58ff1" />
 <img width="600" height="588" alt="c" src="https://github.com/user-attachments/assets/c865f02c-99cd-4107-84be-65bba7541e5b" />
+
+# 7 技術的な問い合わせ
+技術的な問い合わせはメールで受け付けています。
+
+gadget.factory.mail@gmail.com <または> gadget_factory@bf.wakwak.com
