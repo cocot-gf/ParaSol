@@ -1,0 +1,32 @@
+# ParaSol PCB
+ParaSol ファームウェア向け 超小型ML63Q2537 マイコンボード  
+<img width="640" height="480" alt="DSC02185" src="https://github.com/user-attachments/assets/0e1c7422-30e9-44f6-b7ec-8ddf61a84a9b" />
+<img width="506" height="316" alt="DSC02185" src="https://github.com/user-attachments/assets/85b86bd1-0dae-479d-a0f6-890b7bd1fec3" />
+
+
+# 1 概要
+ParaSol PCBはParaSolのファームウェアを実行するために設計された、超小型のML63Q2537マイコンボードです。
+18mm角の基板を採用し、M5Stack BUSモジュールのような実装面積が限られた小型筐体にも手軽に組み込みが可能です。
+基板周囲にはデュアルポート構成のParaSolで使用する通信ポートを引き出し、システムクロック用の水晶振動子をはじめ、
+動作に必要なプルアップ・プルダウン抵抗も内蔵しており、システム構築のために細々した周辺部品を用意する必要がありません。  
+
+ParaSol PCB のマイコンには出荷時点の最新版ParaSol ファームウェアが書き込まれており、購入後すぐに使用できます。  
+
+# 2 特徴
+* 18mm角の基板、600mil幅、14ピンDIPスタイルのピン配置
+* 48MHz PLL発振用の水晶振動子を搭載
+* デュアルポート構成の最新版ParaSolファームウェアを書込み済み
+* SWDピンあり、汎用小型マイコンボードとしても利用可能
+* ワイドレンジの電源電圧2.5～5V
+
+# 3 利用方法
+基板のピン配置などの仕様はParaSolPCB_ProductManual.pdfを読んでください。  
+Solist-AIの機能を含めたParaSolのソフト的な使い方は、親フォルダにあるParaSol_ProductManual.pdfを読んでください。  
+binaryツリーにはこの基板にインストールされている最新版のコンパイル済みバイナリデータも掲載しています。
+  
+[![Youtube](https://github.com/user-attachments/assets/021a77d3-e82f-4512-aa27-0bdfd01b35eb)](https://youtu.be/9uAWkHuoVFw)
+
+# 4 技術的な問い合わせ
+技術的な問い合わせはメールで受け付けています。
+
+gadget.factory.mail@gmail.com <または> gadget_factory@bf.wakwak.com
