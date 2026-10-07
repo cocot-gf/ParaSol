@@ -2,6 +2,8 @@
 Converts the Solist-AI™ MCU into an SPI peripheral device.  
 Solist-AI™ MCUをSPIペリフェラル・デバイス化するファームウェア
 
+[専用基板 ParaSol PCBのページはこちら](https://github.com/cocot-gf/ParaSol/tree/3af40ea97b69edd473f91a10b54839d1eef5728d/ParaSolPCB)
+
 # 1 概要
 ParaSol はローム株式会社のマイコンML63Q2500 シリーズに搭載されているSolist-AI™の機能を、
 ペリフェラル・デバイスとして利用可能にするファームウェアです。
