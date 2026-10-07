@@ -12,7 +12,7 @@ SPI 通信に対応し、ホストCPU のメーカーや型式に依存せず、
 信頼性の高いデータ転送を実現できます。待機時の低速クロック動作や省電力スタンバイ機能を利用し、
 高い省電力性を実現できます。
 
-ParaSol は株式会社データ・テクノの[ブレークアウトボード "AIBBY"](https://www.datatecno.co.jp/prod_info/aibby/) 向けに開発されています。
+ParaSolは専用基板「[ParaSol PCB](https://github.com/cocot-gf/ParaSol/tree/e9cf3cc8e5aad623b3015ec73bee5594f0b32218/ParaSolPCB)」や、株式会社データ・テクノの[ブレークアウトボード "AIBBY"](https://www.datatecno.co.jp/prod_info/aibby/) 向けに開発されています。
 別添のマニュアルには、同社の[評価ボードDT-EBML63Q2557](https://www.datatecno.co.jp/prod_info/solistai_board/)や
 ローム株式会社の[リファレンスボードRB-D63Q2557TB64](https://ros.rohm.co.jp/product/rbd63q2557tb64/01tRC00000BcvYPYAZ)をはじめ、
 48ピンデバイスへ移植するために必要なI/O ポートの割り当て変更方法も紹介しています。
