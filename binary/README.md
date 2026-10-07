@@ -92,3 +92,34 @@ static void setupGpio(void) {
     irq_ext5_init(EXIn_EDGE_RISING, EXIn_SAMPLING_DIS, EXIn_FILTER_DIS, EXIn_PORT_SEL_P35);
   }
 ```
+
+
+## Single_DT-EBML63Q2557 - 内蔵FT2232H経由でPCと通信する例
+global.h
+```c
+// GPIO定義
+#define LED       (0x40U)  // P56
+#define READY     (0x40U)  // P76
+#define LEDPORT   (PORT5->P5DO)  // P56
+#define READYPORT (PORT7->P7DO)  // P76
+```
+
+setup.c
+```c
+static void setupGpio(void) {
+  if(DUALPORT) {
+    PORT4->P4MOD0 = 0x15151215U;  // プライマリ P43=SS0# in, P42=SDI0 in, P41=SDO0 out, P40=SCK0 in
+
+    PORT3->P3MOD1 = 0x05050000U;  // セカンダリ P35=SS0# in, P34=SDI0 in
+    PORT3->P3MOD0 = 0x00050000U;  //        P33=SDO0 out, P32=SCK0 in
+  }
+  else {
+    PORT6->P6MOD0 = 0x15151215U;  // P63=SS1# in, P62=SDI1 in, P61=SDO1 out, P60=SCK1 in
+  }
+
+  clear_bit(READYPORT, READY);    // READY=L 起動処理中はLow
+  set_bit(LEDPORT,   LED);        // LED=点灯
+  PORT7->P7MOD1 = 0x00020000U;    // P76=READY out
+  PORT5->P5MOD1 = 0x00020000U;    // P56=LED out
+}
+```
