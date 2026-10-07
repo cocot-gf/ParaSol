@@ -20,7 +20,7 @@ ParaSol PCB のマイコンには出荷時点の最新版ParaSol ファームウ
 * ワイドレンジの電源電圧2.5～5V
 
 # 3 利用方法
-基板のピン配置などの仕様はParaSolPCB_ProductManual.pdfを読んでください。  
+基板のピン配置などの仕様は[ParaSolPCB_ProductManual.pdf](https://github.com/cocot-gf/ParaSol/blob/86225ecf893b6cf2e4ed778cf5b3287f270a0bf2/ParaSolPCB/ParaSolPCB_1.0_ProductManual.pdf) を読んでください。  
 Solist-AIの機能を含めたParaSolのソフト的な使い方は、親フォルダにある[ParaSol_ProductManual.pdf](https://github.com/cocot-gf/ParaSol/blob/b48c929ddfc375fc4ac8e3bb0690078d2fe2760e/ParaSol_1.5_ProductManual_AMDT3.pdf) を読んでください。  
 binaryツリーにはこの基板にインストールされている最新版のコンパイル済みバイナリデータも掲載しています。
   
