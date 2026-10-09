@@ -19,6 +19,9 @@ ParaSolは専用基板「[ParaSol PCB](https://github.com/cocot-gf/ParaSol/tree/
 ローム株式会社の[リファレンスボードRB-D63Q2557TB64](https://ros.rohm.co.jp/product/rbd63q2557tb64/01tRC00000BcvYPYAZ)をはじめ、
 48ピンデバイスへ移植するために必要なI/O ポートの割り当て変更方法も紹介しています。
 
+ParaSolの名前は「そばに、脇に、～に並んで、並行、補助」を意味するParaとSolist-AIのSolを繋げたもので、
+「外部のCPUと協調動作するSolist-AI」が開発コンセプトになっています。
+
 # 2 特徴
 * Solist-AI™ API の全機能に対応
 * SPI スレーブ動作 モード0 に対応、最大クロック速度12MHz
