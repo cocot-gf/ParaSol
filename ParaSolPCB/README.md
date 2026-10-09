@@ -24,8 +24,14 @@ ParaSol PCB のマイコンには出荷時点の最新版ParaSol ファームウ
 Solist-AIの機能を含めたParaSolのソフト的な使い方は、親フォルダにある[ParaSol_ProductManual.pdf](https://github.com/cocot-gf/ParaSol/blob/b48c929ddfc375fc4ac8e3bb0690078d2fe2760e/ParaSol_1.5_ProductManual_AMDT3.pdf) を読んでください。  
 [binaryツリー](https://github.com/cocot-gf/ParaSol/tree/213b270182fe4c7482088d16837ffaf44c1fdd3f/binary)には、この基板にインストールされている最新版のコンパイル済みバイナリデータも掲載しています。
   
+# 4 ケース内部に貼ってあるシールについて
+<img width="400" height="325" alt="DSC02199" src="https://github.com/user-attachments/assets/c5610b88-8012-4110-866a-c50c5df5387c" />
 
-# 4 技術的な問い合わせ
+このシールに書かれている数字は、動作確認とシリアル番号の管理のためにGet Versionコマンドで取得したUID(ユニークID)です。
+ファームウェアを書き込み後、全数通電検査を行っています。  
+UIDは半導体メーカーが書き込んでいる情報なので、重複することはありません。
+
+# 5 技術的な問い合わせ
 技術的な問い合わせはメールで受け付けています。
 
 gadget.factory.mail@gmail.com <または> gadget_factory@bf.wakwak.com
