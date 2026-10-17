@@ -29,10 +29,10 @@ ODL_Parameters構造体は各AIインスタンスに存在しており、それ�
 | hiddenSize | uint16 | 隠れ層のノード数。(1~165) <br>オートエンコーダの場合はinputSizeの1/8～1/4程度が適切。|
 | outputSize | uint16 | 出力のノード数。(1～4091)<br>オートエンコーダの場合はinputSizeと同一にする。 |
 | forgettingFactor | bfloat16 | 逐次学習時の忘却率。デフォルトは1。<br>範囲は0.5～2で、0に近いほど新しい入力データを優先する。<br><br>忘却率は松谷研の論文に「調整が困難」と書かれており、実際に1以外にすると学習結果が発散することが多いため、デフォルト値から動かさないほうが良いです。 |
-| activationFunction | uint8 | 隠れ層を計算する際に使用する活性化関数。<br>(0) Linear f(x) = x<br>(1) Hard Sigmoid f(x) = max(0, min(1, 0.2x + 0.5) )<br>(2) ReLU f(x) = max(0, x)<br>(3) Hard tanh f(x) = max(-1, min(1, x) ) |
-| lossFunction | uint8 | Lossの算出に使用する損失関数。学習そのものには影響しない。<br>(0) 平均絶対誤差 MAE, Mean Absolute Error<br>(1) 半平均二乗誤差 Half MSE, Mean Squared Error<br>通常はMSEを使う方が良い。|
+| activationFunction | uint8 | 隠れ層を計算する際に使用する活性化関数。<br>(0) Linear f(x) = x<br>(1) Hard Sigmoid f(x) = max(0, min(1, 0.2x + 0.5) )<br>(2) ReLU f(x) = max(0, x)<br>(3) Hard tanh f(x) = max(-1, min(1, x) ) <br><br>学習させるデータによってどの関数が精度良く学習できるかが変わってきます。迷ったらとりあえずHard SigmoidかLinearで試してみてください。L2Paramを0以外にすると、どの関数を使ってもうまく学習できちゃったりもします。|
+| lossFunction | uint8 | Lossの算出に使用する損失関数。学習そのものには影響しない。<br>(0) 平均絶対誤差 MAE, Mean Absolute Error<br>(1) 半平均二乗誤差 Half MSE, Mean Squared Error<br><br>通常はMSEを使う方が良いです。|
 | seed | uint16 | 重みα・γを生成する乱数のシード値。 範囲は1～32767。<br>ELMの入力ノードと隠れ層の間の重みは乱数が用いられる。<br>重みデータの内容も乱数シードに依存する。 |
-| scaleAlpha | bfloat16 | 入力ノードと隠れ層の間にある重みαが取りうる乱数の範囲。<br>[-scaleAlpha, scaleAlpha]の一様乱数となる。<br><br>活性化関数にHard Sigmoidを使うときは、34.5388 / inputSize の値をセットするのが良いらしい。しかしアプリケーションノートではHard Sigmoid以外でもこの数値が使用されていたり、ESNでは説明もなく 32767 / inputSize / 100 / 1024 の式が登場するので、根拠に乏しいマジックナンバーである。 |
+| scaleAlpha | bfloat16 | 入力ノードと隠れ層の間にある重みαが取りうる乱数の範囲。<br>[-scaleAlpha, scaleAlpha]の一様乱数となる。<br><br>活性化関数がHard Sigmoidの時は、34.5388 / inputSize の値をセットするのが良いらしい。しかしアプリケーションノートではHard Sigmoid以外でもこの数値が使用されていたり、ESNでは説明もなく 32767 / inputSize / 100 / 1024 の式が登場するので、根拠に乏しいマジックナンバーである。 |
 | scaleGamma | bfloat16 | Echo State Networkの隠れ層ノードのフィードバック重みγが取りうる乱数の範囲。<br>[-scaleGamma, scaleGamma]の一様乱数となる。<br>設定値はscaleAlphaと同じ計算方法で出す。<br>0ならESNのフィードバックの計算は行われない。|
 | leakRate | bfloat16 | Echo State Network のリークレート。デフォルトは1。範囲は0～1。|
 | L2Param | bfloat16 | 過学習防止に使われるL2正則化項。デフォルトは0。<br>値が小さいほど効きが強く、10^-3～10^3 程度の範囲で使用する。1～50くらいの値が適切。0ならL2正則化は行われない。<br><br>過学習防止のほかに、学習結果が収束するまでの学習回数が大幅に短くなる効果があります。特に、教師あり学習のターゲットTと推論出力Yの精度が必要な場合(デジタルチックなタグ付け出力が欲しい時)に効果絶大でした。|
