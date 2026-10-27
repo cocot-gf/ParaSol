@@ -23,7 +23,7 @@ Solist-AIのELMは、基本的に教師あり学習を想定した構造のた�
 
 ## 目次
 1. [AIエンジンの初期化手順と初期化パラメータの解説](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/1_Initialize.md)
-2. 教師なし学習：未知の異常検知、分類
+2. [教師なし学習：未知の異常検知、分類](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/2_Self_Supervised_Learning.md)
 3. 教師あり学習：分類、既知の異常検知、予測
 4. 時系列データの学習：予測
 
