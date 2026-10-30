@@ -7,7 +7,7 @@ ParaSolのマニュアルにも記載されている内容ですが、実機で�
 AIエンジンを使うときは、以下の手順を実行してください。  
 
 <p align="center">
-  <img width="212" height="372" alt="init" src="https://github.com/user-attachments/assets/9bab2a49-a5fe-4332-a913-6b83d8c64184" />
+  <img width="192" height="352" alt="aa" src="https://github.com/user-attachments/assets/f9393851-6d19-4c78-b7ff-45eed6ea6b89" />
 </p>
 
 * AI-RAMクリアは必須ではありませんが、モデル数やインスタンスのメモリサイズを変更するときは領域の再割り当てが実行されるので、入れておいた方が無難です。
