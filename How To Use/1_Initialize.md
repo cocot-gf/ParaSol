@@ -30,7 +30,7 @@ ODL_Parameters構造体は各AIインスタンスに存在しており、それ�
 | outputSize | uint16 | 出力のノード数。(1～4091)<br>オートエンコーダの場合はinputSizeと同一にする。 |
 | forgettingFactor | bfloat16 | 逐次学習時の忘却率。デフォルトは1。<br>範囲は0.5～2で、0に近いほど新しい入力データを優先する。<br><br>忘却とは過去の学習を削除するのではなく、結果出力への影響を低くするという意味で、平均されて薄まる、曖昧になるというニュアンスです。忘却率は松谷研の論文に「調整が困難」と書かれており、実際に1以外にすると学習結果が発散することが多いため、デフォルト値から動かさないほうが良いです。 |
 | activationFunction | uint8 | 隠れ層を計算する際に使用する活性化関数。<br>(0) Linear f(x) = x<br>(1) Hard Sigmoid f(x) = max(0, min(1, 0.2x + 0.5) )<br>(2) ReLU f(x) = max(0, x)<br>(3) Hard tanh f(x) = max(-1, min(1, x) ) <br><br>学習させるデータによってどの関数が精度良く学習できるかが変わってきます。迷ったらとりあえずHard SigmoidかLinearで試してみてください。L2Paramを0以外にすると、どの関数を使ってもうまく学習できちゃったりもします。|
-| lossFunction | uint8 | Lossの算出に使用する損失関数。学習そのものには影響しない。<br>(0) 平均絶対誤差 MAE, Mean Absolute Error<br>(1) 半平均二乗誤差 Half MSE, Mean Squared Error<br><br>通常はMSEを使う方が良いです。|
+| lossFunction | uint8 | Lossの算出に使用する損失関数。学習そのものには影響しない。<br>(0) 平均絶対誤差 MAE, Mean Absolute Error<br>(1) 半平均二乗誤差 Half MSE, Mean Squared Error<br><br>通常は敏感に数字が出るMSEを使う方が良いのですが、0基準ではなく1基準で数字が動くため、慣れないと使いにくいかもしれません。|
 | seed | uint16 | 重みα・γを生成する乱数のシード値。 範囲は1～32767。<br>ELMの入力ノードと隠れ層の間の重みは乱数が用いられる。<br>重みデータの内容も乱数シードに依存する。 |
 | scaleAlpha | bfloat16 | 入力ノードと隠れ層の間にある重みαが取りうる乱数の範囲。<br>[-scaleAlpha, scaleAlpha]の一様乱数となる。<br><br>活性化関数がHard Sigmoidの時は、34.5388 / inputSize の値をセットするのが良いらしい。しかしアプリケーションノートではHard Sigmoid以外でもこの数値が使用されていたり、ESNでは説明もなく 32767 / inputSize / 100 / 1024 の式が登場するので、根拠に乏しいマジックナンバーである。 |
 | scaleGamma | bfloat16 | Echo State Networkの隠れ層ノードのフィードバック重みγが取りうる乱数の範囲。<br>[-scaleGamma, scaleGamma]の一様乱数となる。<br>設定値はscaleAlphaと同じ計算方法で出す。<br>0ならESNのフィードバックの計算は行われない。|
