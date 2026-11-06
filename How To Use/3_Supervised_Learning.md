@@ -94,9 +94,8 @@ DTMFは4種類×3種類の音の組み合わせで12種類の数字を表現す�
   <img width="416" height="197" alt="e" src="https://github.com/user-attachments/assets/e6ec5985-d7cd-4827-825b-9f5c27029a1b" />
   
 ### 2. 分類スコアが欲しい場合
-物体Aへの類似度80%、物体Bへの類似度20%のような連続的な結果が欲しい場合で、分類の最終判断は人間が閾値などを用意するタイプです。
-[教師なし学習](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/2_Self_Supervised_Learning.md)の複数の分類であげた例のように、
-断定をしないタイプの分類です。
+物体Aへの類似度80%、物体Bへの類似度20%のような連続的な結果が欲しい場合で、[教師なし学習](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/2_Self_Supervised_Learning.md)の複数の分類であげた例のように、断定をしないタイプの分類です。
+分類の最終判断は人間が閾値などを用意する必要があります。
 
 先のデジタルチックな値の出力をよく見ると、分類スコアとして使えるであろう値の分布になっていることがわかります。推論出力のデータをうまく利用してあげれば万事解決ですね。
 
