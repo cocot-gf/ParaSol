@@ -83,7 +83,7 @@ DTMFは4種類×3種類の音の組み合わせで12種類の数字を表現す�
 * 初期化パラメータ。入力データはFFTから出力された64点の周波数です。推論出力は10種類のフラグとして扱います。  
   <img width="223" height="186" alt="aa" src="https://github.com/user-attachments/assets/3631913e-9ed2-4d62-820d-a93203707456" />
 * 学習データ。10種類の周波数情報を各1回だけ学習させます。
-  学習データのXとTは前処理で最大値を同じくらいの数値範囲に合わせています。100倍とか桁が違うと学習効率に響いてきます。  
+  学習データのXとTは前処理で最大値を同じくらいの数値範囲に合わせています。100倍とか桁が違うと学習効率が悪化する場合があります。  
   <img width="638" height="197" alt="b" src="https://github.com/user-attachments/assets/a6ec706e-69b1-4ecb-8dba-74c194b05116" />
 * 学習ごとにXデータをそのまま推論させた結果、概ね1に達しているので既知の値が入力されれば十分フラグ判定ができそう。  
   <img width="216" height="197" alt="c" src="https://github.com/user-attachments/assets/0c97c77e-8d61-41ff-9e97-a148eaec07bd" />
