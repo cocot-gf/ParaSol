@@ -8,9 +8,9 @@
 初期化のポイントは入力と出力のサイズを同一にする事です。
 | パラメータ | 設定値 |
 |-|-|
-|inputSize|データサイズに合わせて任意。|
-|hiddenSize|inputSizeの1/4～1/8程度、少なすぎると再現性が減る。<br>必要RAMサイズに合わせて加減する。|
-|outputSize|inputSizeと同じに設定値。|
+|inputSize|データサイズに合わせて任意。Max = 4091|
+|hiddenSize|inputSizeの1/4～1/8程度。Max = 165<br>少なすぎると再現性が減り、大きすぎると必要RAMと計算時間が増大する。|
+|outputSize|inputSizeと同じに設定値。Max = 4091|
 |forgettingFactor|1|
 |activationFunction|任意|
 |lossFunction|任意|
@@ -18,7 +18,7 @@
 |scaleAlpha|LN(10^15) / inputSize|
 |scaleGamma|0|
 |leakRate|0|
-|L2Param|任意、1～50あたりを入れると再現性・学習速度・発散耐性が上がる。|
+|L2Param|0または任意、1～50あたりを入れると再現性・学習速度・発散耐性が上がる。|
 
 ## 学習の手順
 入力データを教師データとすれば、オートエンコーダとして動作します。
