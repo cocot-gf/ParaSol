@@ -29,7 +29,7 @@ Solist-AIには推論の結果から損失関数(平均絶対誤差 or 平均二
 |activationFunction|任意、前処理をしていないならLinearから試すのがオススメ。|
 |lossFunction|任意|
 |seed|任意|
-|scaleAlpha|とりあえず LN(10^15) / inputSize|
+|scaleAlpha|0(Auto)か、とりあえず LN(10^15) / inputSize|
 |scaleGamma|0|
 |leakRate|0|
 |L2Param|0または任意、1～50あたりを入れると再現性・学習速度・発散耐性が上がり、hiddenSizeを大幅に縮小できる。|
