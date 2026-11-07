@@ -74,7 +74,13 @@ ML63Q2537 48ピンデバイスにデュアルポート構成のプログラム�
 <img width="600" height="586" alt="b" src="https://github.com/user-attachments/assets/fcd459e4-e02b-4d8e-b177-f3aa03a58ff1" />
 <img width="600" height="588" alt="c" src="https://github.com/user-attachments/assets/c865f02c-99cd-4107-84be-65bba7541e5b" />
 
-# 7 技術的な問い合わせ
-技術的な問い合わせはメールで受け付けています。
+# 7 取説修正記録 - AMENDMENT Info, Ver.1.5
+* AMDT1	: MSEがHalf MSEであることを明記。
+* AMDT2	: FFTはパワースペクトルしか取得できない旨を明記。入出力最大とリザバー有りの実行時間を記載。
+* AMDT3	: クロック誤差を言及するため周波数をHz単位で明記。
+* AMDT4	: scaleAlpha=0の時の挙動を明記。ParaSolのGitHubリンクを記載。
+
+# 8 技術的な問い合わせ
+技術的な問い合わせはGitHubのディスカッションかメールで受け付けています。
 
 gadget.factory.mail@gmail.com <または> gadget_factory@bf.wakwak.com
