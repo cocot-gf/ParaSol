@@ -1,7 +1,7 @@
 # ParaSolのAI学習・推論機能の使い方
 
 ParaSolの説明書には「各コマンドの利用方法や使用する順番は、ロームのサンプルプログラムを参照すること。」と記載しておりましたが、
-サンプルプログラムは登録者しか入手できないためParaSolを作ったという経緯があり、説明の辻褄が合いません。
+「サンプルプログラムは登録者しか入手できない」という理由でParaSolを作った経緯があり、説明の辻褄が合いません。
 
 そのため本ドキュメントでは、実機で動作を確認した具体的な事例をもとに、実践的な使い方を解説します。
 理論云々で検討を重ねるよりもデータを入れればとりあえず動くので、いろいろ試して実践してみてください。
@@ -23,7 +23,7 @@ Solist-AIのELMは基本的に教師あり学習を想定した構造のため�
 1. [AIエンジンの初期化手順と初期化パラメータの解説](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/1_Initialize.md)
 2. [教師なし学習：類似性の検出・未知の異常検知・二値分類、複数の分類](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/2_Self_Supervised_Learning.md)
 3. [教師あり学習：既知の分類・未知の予測分類、回帰分析と予測](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/3_Supervised_Learning.md)
-4. 時系列データの学習：予測
+4. [順序データの学習：予測、リザバー系学習、Echo State Network](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/4_Echo_State_Network.md)
 
 上記は書く予定の項目で、リンクが張られていないものは概ね11月中を目途に完成させる予定です。
 
