@@ -23,11 +23,11 @@ Solist-AIには推論の結果から損失関数(平均絶対誤差 or 平均二
 
 | パラメータ | 設定値 |
 |-|-|
-|inputSize|キーになるデータセットのサイズに合わせて任意。Max = 4091|
-|hiddenSize|outputSizeの1/2～4倍程度。Max = 165<br>少なすぎると再現性が減り、大きすぎると必要RAMと計算時間が飛躍的に増大する。|
-|outputSize|結果として得たいデータセットのサイズ。Max = 4091|
+|inputSize|キーになるデータセットのサイズに合わせて任意。|
+|hiddenSize|outputSizeの1/2～4倍程度。<br>少なすぎると再現性が減り、大きすぎると必要RAMと計算時間が飛躍的に増大する。|
+|outputSize|結果として得たいデータセットのサイズ。|
 |forgettingFactor|1|
-|activationFunction|任意、Linearから試すのがオススメ。変更すると推論結果が良くなる可能性あり。|
+|activationFunction|任意、0(Linear)から試すのがオススメ。変更すると推論結果が良くなる可能性あり。|
 |lossFunction|任意|
 |seed|任意|
 |scaleAlpha|0(Auto)か、とりあえず LN(10^15) / inputSize|
