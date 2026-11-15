@@ -1,8 +1,23 @@
 # Echo State Network(ESN)を使った時系列データの学習
-書きかけです。
+これまでに出てきた教師あり学習ではKey(X)とValue(T)の値のみに着目して学習・推論を実行していましたが、
+時系列モデルではKeyとValueの他に過去の学習・推論の【状態】を保持することで、特定の並びでデータが入ってきたときの振る舞いを表現することができます。
 
-## ESN向けの初期化手順
+下図では100周期で一巡するサイン波形を例に挙げています。学習動作の図1ではキーとなる青色のXと90度位相が進んだ赤色のターゲット値Tがあり、
+推論時に青い波形を入力すると90度先の波形を予測したい想定になっています。
+<img width="628" height="237" alt="aa" src="https://github.com/user-attachments/assets/0e3f0e64-f0bb-4790-87b9-5ccf96da04db" />
 
+図2は時系列モデル用のEcho State Network(ESN)が無効の状態で、値に対する推論出力しか得られないため意図した結果になりません。
+これは学習波形Xの0.75に対するTの値が0.9付近と0.1付近の2か所ある事からもわかるように、状況に応じた【次の値は何か】という概念が無いからです。
+これに対して図3がESNを有効にして学習・推論をさせた様子です。AI内部の計算がどうなっているかはさておき、90度位相が進んだ波形をうまく予測できています。
+
+図4のように推論入力Xの値が急にジャンプした時はどうなるでしょうか?(赤矢印)  
+出力Yは入力Xから推論される最も妥当な値を出力するとともに、入力Xを追従しながら本来の波形を出力し始めます。
+<img width="410" height="217" alt="cc" src="https://github.com/user-attachments/assets/50ae9f71-125f-4ab6-80ba-63d65d2e4a29" />
+
+こういった効果を使って数値予測や機械のフィードバック・予測制御などに応用ができます。
+
+## Echo State Network向けの初期化手順
+Echo State NetworkはscaleGammaを0以外の値に設定するだけで有効になります。
 | パラメータ | 設定値 |
 |-|-|
 |inputSize|キーになるデータセットのサイズに合わせて任意。|
@@ -13,6 +28,15 @@
 |lossFunction|任意|
 |seed|任意|
 |scaleAlpha|0(Auto)か、とりあえず LN(10^15) / inputSize|
-|scaleGamma|0以外の任意、とりあえず <img width="108" height="37" alt="aa" src="https://github.com/user-attachments/assets/f6caaf4b-4656-4ecd-828e-2f639aa901b1" /> からスタート。|
+|scaleGamma|0以外の値でEcho State Networkが有効になる。<br>この値はEcho State Property(ESP)を持たせるために <img width="108" height="37" alt="aa" src="https://github.com/user-attachments/assets/f6caaf4b-4656-4ecd-828e-2f639aa901b1" /> の式を使って導いた値を基準として設定します。この値の経験則は、大きくしすぎると推論時に入力Xへの追従性が悪くなり、小さくしすぎると入力Xの変化に敏感に反応しすぎるようになります。|
 |leakRate|任意、0.5からスタート。|
 |L2Param|0または任意、0.5～10あたりを入れると再現性・学習速度・発散耐性が上がり、hiddenSizeを大幅に縮小できる。|
+
+## 学習の手順
+追記予定
+
+## 推論の手順
+追記予定
+
+## 応用アプリケーション
+追記予定
