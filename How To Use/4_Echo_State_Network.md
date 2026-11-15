@@ -53,6 +53,6 @@ Echo State Networkを有効にするには、scaleGammaを0以外の値に設定
 なんだかPLL回路のロックのようなフィードバック制御に応用できないものか...  
 <img width="623" height="374" alt="xx" src="https://github.com/user-attachments/assets/40606d50-b038-474a-8b15-8fb8e2579a63" />
 
-現実や未来を予測するには? 未来の値が合っているかどうやって検証するのか? 活用できるのだろうか?  
+過去を元に現実や未来を予測するには? 未来の値が合っているかどうやって検証するのか? 活用できるのだろうか?  
 <img width="848" height="194" alt="xx" src="https://github.com/user-attachments/assets/7ccfda02-895c-4a4b-a93a-4eda7e281ff8" />
 
