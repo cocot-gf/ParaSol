@@ -55,7 +55,7 @@ Echo State Networkを有効にするには、scaleGammaを0以外の値に設定
 <img width="623" height="374" alt="xx" src="https://github.com/user-attachments/assets/40606d50-b038-474a-8b15-8fb8e2579a63" />
 
 ### 過去を元に現実を、現実を元に未来を予測する実装のイメージ  
-Lossは絶対値出力のため予測が上下どちらにずれているかを判別できない。自前で損失関数を実装する必要が出てくるかも。  
+Lossは絶対値出力のため予測が上下どちらにずれているかを判別できません。制御に使える損失関数を自前で実装した方が良いかも。  
 <img width="848" height="194" alt="xx" src="https://github.com/user-attachments/assets/7ccfda02-895c-4a4b-a93a-4eda7e281ff8" />
 <br><br>
 理論的に説明できない限り採用しないか、とりあえずうまく動けば採用するか、AI導入の是非を判断するのは永遠の課題です。
