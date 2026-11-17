@@ -25,7 +25,7 @@ Solist-AIのELMは基本的に教師あり学習を想定した構造のため�
 3. [教師あり学習：既知の分類・未知の予測分類、回帰分析と予測](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/3_Supervised_Learning.md)
 4. [時系列モデル：予測、リザバー系学習、Echo State Network](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/4_Echo_State_Network.md)
 
-上記は書く予定の項目で、リンクが張られていないものは概ね11月中を目途に完成させる予定です。
+※ 時系列モデルの推論の章がまだ書けていません。11月中に書きあげる予定です。
 
 ## AI一般についての参考サイト
 [2026年版機械学習ガイド - IBM](https://www.ibm.com/jp-ja/think/machine-learning)  
