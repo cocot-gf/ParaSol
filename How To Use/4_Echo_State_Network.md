@@ -76,7 +76,7 @@ ESNの学習都度にLossを要求される局面は少ないと思いますが�
        学習 x[inputSize], t[outputSize]
        
        65h：リザバー取得
-         推論 x[inputSize], t[inputSize]  
+         推論 x[inputSize], t[outputSize]  
          Loss取得 (任意)  
          4Dh：推論結果y取得 (任意)  
        68h：リザバー書き戻し
