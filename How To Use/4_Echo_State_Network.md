@@ -55,8 +55,8 @@ ESNでは過去の状態を保持するために、ELMの隠れ層に赤線の�
 教師あり学習と同じように入力データXと教師データTをペアで学習させてください。  
 <br>
 
-    学習クリア  
-    リザバークリア  
+    42h：学習クリア  
+    43h：リザバークリア  
 
     <学習回数ループ>  
        学習 x[inputSize], t[outputSize]
@@ -75,11 +75,11 @@ ESNの学習都度にLossを要求される局面は少ないと思いますが�
     <学習回数ループ>  
        学習 x[inputSize], t[outputSize]
        
-       ODL_GetReservoir
-        推論 x[inputSize], t[inputSize]  
-        Loss取得 (任意)  
-        推論結果y取得 (任意)  
-       ODL_SetReservoir
+       65h：リザバー取得
+         推論 x[inputSize], t[inputSize]  
+         Loss取得 (任意)  
+         推論結果y取得 (任意)  
+       68h：リザバー書き戻し
     <ループ終了> 
 
 ## 推論の手順
