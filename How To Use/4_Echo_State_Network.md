@@ -43,7 +43,7 @@ FFTの周波数情報のような多点を一度に学習させることもで�
 |lossFunction|任意|
 |seed|任意|
 |scaleAlpha|0(Auto)か、とりあえず LN(10^15) / inputSize|
-|scaleGamma|0以外の値でEcho State Networkが有効になる。<br>この値はEcho State Property(ESP)を持たせるために <img width="108" height="37" alt="aa" src="https://github.com/user-attachments/assets/f6caaf4b-4656-4ecd-828e-2f639aa901b1" /> の式を使って導いた値を基準として設定します。この値の経験則は、大きくしすぎると推論時に入力Xへの追従性が悪くなり、小さくしすぎると入力Xの変化に敏感かつ過度に反応するようになります。|
+|scaleGamma|0以外の値でEcho State Networkが有効になる。<br>この値はEcho State Property(ESP)を持たせるために <img width="108" height="37" alt="aa" src="https://github.com/user-attachments/assets/f6caaf4b-4656-4ecd-828e-2f639aa901b1" /> の式を使って導いた値を基準として設定します。経験則では、大きくしすぎると推論時に入力Xへの追従性が悪くなり、小さくしすぎると入力Xの変化に敏感かつ過度に反応するようになります。どちらの場合もやりすぎはデタラメな値が出力される原因になるので注意してください。|
 |leakRate|任意、0.5からスタート。|
 |L2Param|0または任意、0.5～10あたりを入れると再現性・学習速度・発散耐性が上がり、hiddenSizeを大幅に縮小できる。|
 
