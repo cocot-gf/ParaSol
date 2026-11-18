@@ -58,7 +58,15 @@ Solist-AIには推論の結果から損失関数(平均絶対誤差 or 平均二
 * L2Paramの値を適当に増やすと一発の学習で精度よく覚えることが多くなり、発散もかなり抑えられます。(経験則)
 
 ## 推論の手順
-推論手順や動作の注意点は[教師なし学習の推論動作](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/2_Self_Supervised_Learning.md)と全く同じです。  
+推論は以下の手順で行います。推論引数のTのデータ数はoutputSizeになるので注意してください。教師ありの場合は推論結果YかLossのどちらか必要なものだけ取得すればOKです。
+
+    <推論回数ループ>  
+        推論 x[inputSize], t[outputSize]  
+        Loss取得 (任意)  
+        4Dh：推論結果y取得 (任意)  
+    <ループ終了>
+
+動作の注意点は[教師なし学習の推論動作](https://github.com/cocot-gf/ParaSol/blob/Ver.1.5-RELEASE/How%20To%20Use/2_Self_Supervised_Learning.md)と全く同じです。  
 <br>
 
 # 応用アプリケーション
